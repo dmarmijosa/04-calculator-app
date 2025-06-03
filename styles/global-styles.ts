@@ -25,4 +25,27 @@ export const globalStyles = StyleSheet.create({
     fontWeight: 300,
     //fontFamily: "SpaceMono", // Ensure this font is loaded in your app
   },
+
+  row: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 18,
+    paddingHorizontal: 10, // Adjust spacing between rows
+  },
+  button: {
+    height: 80,
+    width: 80,
+    backgroundColor: Colors.darkGray,
+    borderRadius: 100,
+    justifyContent: "center",
+    marginHorizontal: 10, // Adjust spacing between buttons
+  },
+  buttonText: {
+    textAlign: "center",
+    padding: 10,
+    fontSize: 30,
+    color: Colors.textPrimary,
+    fontWeight: 300,
+    fontFamily: "SpaceMono", // Ensure this font is loaded in your app
+  },
 });
