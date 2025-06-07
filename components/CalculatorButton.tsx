@@ -6,6 +6,7 @@ import { Pressable, Text } from "react-native";
 interface Props {
   label: string;
   color?: string;
+  doubleSize: boolean;
   blackText?: boolean;
   onPress?: () => void;
 }
@@ -14,10 +15,19 @@ const CalculatorButton = ({
   label,
   color = Colors.darkGray,
   blackText = false,
+  doubleSize = false,
   onPress,
 }: Props) => {
   return (
-    <Pressable style={globalStyles.button} onPress={onPress}>
+    <Pressable
+      style={({ pressed }) => ({
+        ...globalStyles.button,
+        backgroundColor: color,
+        opacity: pressed ? 0.7 : 1,
+        width: doubleSize ? 180 : 80,
+      })}
+      onPress={onPress}
+    >
       <Text
         style={{
           ...globalStyles.buttonText,
