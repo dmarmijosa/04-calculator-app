@@ -6,7 +6,7 @@ import { Pressable, Text } from "react-native";
 interface Props {
   label: string;
   color?: string;
-  doubleSize: boolean;
+  doubleSize?: boolean;
   blackText?: boolean;
   onPress?: () => void;
 }
